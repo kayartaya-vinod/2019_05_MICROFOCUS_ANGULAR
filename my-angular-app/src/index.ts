@@ -1,1 +1,1 @@
-import './examples/ex02';
+import './main';
