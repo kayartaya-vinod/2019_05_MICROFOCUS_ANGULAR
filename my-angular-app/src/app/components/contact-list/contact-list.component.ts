@@ -10,12 +10,23 @@ import { ContactsService } from 'src/app/services/contacts.service';
 })
 export class ContactListComponent implements OnInit {
 
+  pageNum: number = 1;
   contacts: Observable<Contact[]>;
 
   constructor(private service: ContactsService) { }
 
   ngOnInit() {
     this.contacts = this.service.getContacts(); // not yet subscribed
+  }
+
+  nextPage() {
+    this.pageNum++;
+    this.contacts = this.service.getContacts(this.pageNum);
+  }
+
+  prevPage() {
+    this.pageNum--;
+    this.contacts = this.service.getContacts(this.pageNum);
   }
 
 }
