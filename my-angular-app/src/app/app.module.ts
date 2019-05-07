@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { CounterComponent } from './components/counter/counter.component';
@@ -11,6 +12,8 @@ import { AgePipe } from './pipes/age.pipe';
 import { ContactDetailsComponent } from './components/contact-details/contact-details.component';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
 import { ContactListComponent } from './components/contact-list/contact-list.component';
+import routeConfig from './route.config';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,13 @@ import { ContactListComponent } from './components/contact-list/contact-list.com
     AgePipe,
     ContactDetailsComponent,
     ContactCardComponent,
-    ContactListComponent
+    ContactListComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routeConfig, {useHash: true})
   ],
   providers: [],
   bootstrap: [AppComponent]

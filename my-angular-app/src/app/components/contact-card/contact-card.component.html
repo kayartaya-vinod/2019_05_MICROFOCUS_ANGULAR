@@ -4,7 +4,9 @@
       [ngStyle]="{'border-radius': '50%', 'width.px': 100, 'height.px': 100}">
   </div>
   <div class="col">
-    <h5>{{ contact | fullname }}</h5>
+    <!-- http://localhost:4200/#/contact-details/66 -->
+    <h5 class="clickable" 
+      [routerLink]="['/contact-details', contact.id]">{{ contact | fullname }}</h5>
     <p>{{ contact.city }} {{ contact.country }}</p>
   </div>
 </div>

@@ -18,7 +18,7 @@ export class ContactsService {
 
   getOneContact(id: number): Observable<Contact> {
     return this.http.get(baseUrl + id)
-      .do(resp => console.log('logged at do function', resp))
+      //.do(resp => console.log('logged at do function', resp))
       .map(resp => resp as Contact);
   }
 

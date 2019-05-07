@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+    text-shadow: 0 0 5px yellow;
+}

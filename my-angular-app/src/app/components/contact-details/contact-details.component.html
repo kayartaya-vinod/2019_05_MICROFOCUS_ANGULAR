@@ -1,12 +1,11 @@
-
 <div class="row">
   <div class="col">
-    
+
     <img [src]="contact.picture" [ngStyle]="{'width.px': 300, 'height.px': 300}" />
-    
+
   </div>
   <div class="col">
-    
+
     <h3>{{ contact | fullname }} </h3>
     <table class="table table-hover">
       <tbody>
@@ -40,6 +39,9 @@
         </tr>
       </tbody>
     </table>
-
   </div>
+
 </div>
+
+<button class="btn btn-warning" 
+  [routerLink]="['/contact-list']">Back to list</button>
