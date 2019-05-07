@@ -14,7 +14,6 @@ Duration: 4 days <br />
         </a>
         <strong>Angular 7</strong>
     </td>
-
     <td>
         <a href="https://www.udemy.com/learn-react-and-redux-by-examples/?couponCode=VINODCO" target="_blank">
         <img src="https://vinod.co/assets/images/udemy/learn-react-and-redux-by-examples.jpeg">
@@ -27,8 +26,6 @@ Duration: 4 days <br />
         </a>
         <strong>RESTful Java web services</strong>
     </td>
-
-
 </tr>
 <tr>
     <td>
