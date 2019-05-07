@@ -1,0 +1,27 @@
+<div>
+  <h3>List of people</h3>
+
+  <button (click)="toggleFilter()" class="btn btn-outline-primary">
+    Show {{ gender==='Male'? 'female': 'male' }} contacts</button>
+
+  <div>
+    <div *ngFor="let p of persons; index as n;">
+
+      <div *ngIf="p.gender === gender">
+        <button (click)="deletePerson(n)" class="btn btn-outline-danger">&times;</button>
+        {{ p.name | uppercase }} is {{ p.age }} years old.</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- "value" is an HTML attribute and not an Angular directive; but the square
+bracket around the same is indication that the RHS is to be treated 
+as an expression -->
+<input type="text" value="author" />
+<input type="text" [value]="author" />
+<input type="text" value="{{author}}" />
+
+<p>
+  <!-- Raw data is {{ persons | json }} -->
+</p>

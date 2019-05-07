@@ -1,0 +1,9 @@
+<h3>Custom pipe demo</h3>
+<!-- <p>Name: {{ (contact.gender==='Male'?'Mr.':'Ms.') + contact.firstname + ' ' + contact.lastname }}</p> -->
+
+<p>Name: {{ contact | fullname }}</p>
+
+<p>Age: {{ contact.dob | age  }} </p>
+<p>Age: {{ contact.dob | age : 1 }} </p>
+<p>Age: {{ contact.dob | age : 2 }} </p>
+<p>Age: {{ contact.dob | age : 3 }} </p>

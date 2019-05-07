@@ -7,8 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivesDemoComponent implements OnInit {
 
+  author = 'Vinod';
   persons: Array<any>;
   gender: string;
+
+  defaultStyles = {
+    'border-left-width.px': 5,
+    'border-left-style': 'solid',
+    'border-left-color': 'red',
+    'padding.px': 10,
+    listStyle: 'none'
+  }
+
   constructor() { }
 
   ngOnInit() {
@@ -29,6 +39,10 @@ export class DirectivesDemoComponent implements OnInit {
 
   deletePerson(index: number) {
     this.persons.splice(index, 1);
+  }
+
+  getClassName(p) {
+    return (p.age<18) ? 'text-danger': 'text-success';
   }
 
 }
