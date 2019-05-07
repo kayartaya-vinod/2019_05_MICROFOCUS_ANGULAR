@@ -3,13 +3,13 @@
 
 Run the command:
 
-```
+```sh
 ng g universal --clientProject my-angular-app
 ```
 
 Output of the above command would look something like:
 
-```
+```sh
 CREATE src/main.server.ts (220 bytes)
 CREATE src/app/app.server.module.ts (318 bytes)
 CREATE src/tsconfig.server.json (219 bytes)
@@ -113,7 +113,7 @@ export class AppModule { }
 
 1. src/main.server.ts
 
-```
+```js
 import { enableProdMode } from '@angular/core';
 
 import { environment } from './environments/environment';
@@ -128,7 +128,7 @@ export { AppServerModule } from './app/app.server.module';
 
 2. src/app/app.server.module.ts
 
-```
+```js
 import { NgModule } from '@angular/core';
 import { ServerModule } from '@angular/platform-server';
 
@@ -148,7 +148,7 @@ export class AppServerModule {}
 
 3. src/tsconfig.server.json
 
-```
+```json
 {
   "extends": "./tsconfig.app.json",
   "compilerOptions": {
