@@ -1,13 +1,13 @@
-<h3>Details of {{ contact | fullname }} </h3>
 
 <div class="row">
   <div class="col">
-
+    
     <img [src]="contact.picture" [ngStyle]="{'width.px': 300, 'height.px': 300}" />
-
+    
   </div>
   <div class="col">
-
+    
+    <h3>{{ contact | fullname }} </h3>
     <table class="table table-hover">
       <tbody>
         <tr>

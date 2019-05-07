@@ -9,6 +9,8 @@ import { PipeDemoComponent } from './components/pipe-demo/pipe-demo.component';
 import { FullnamePipe } from './pipes/fullname.pipe';
 import { AgePipe } from './pipes/age.pipe';
 import { ContactDetailsComponent } from './components/contact-details/contact-details.component';
+import { ContactCardComponent } from './components/contact-card/contact-card.component';
+import { ContactListComponent } from './components/contact-list/contact-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ContactDetailsComponent } from './components/contact-details/contact-de
     PipeDemoComponent,
     FullnamePipe,
     AgePipe,
-    ContactDetailsComponent
+    ContactDetailsComponent,
+    ContactCardComponent,
+    ContactListComponent
   ],
   imports: [
     BrowserModule,
