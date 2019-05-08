@@ -1,9 +1,96 @@
-<br>
-<br>
-<br>
+<div class="row">
+  <div class="col">
+    <img [src]="contact.picture" [ngStyle]="{'width.px': 300, 'height.px': 300}" />
+  </div>
 
-<input type="text" [(ngModel)]="contact.firstname">
 
-<div>
-  Value of contact is {{ contact | json }}
+  <div class="col">
+
+    <h3>Add details of new contact</h3>
+
+    <form class="form-horizontal">
+
+      <div class="form-group row">
+        <label for="firstname" class="col-sm-3">Firstname</label>
+        <div class="col-sm-7">
+          <input id="firstname" name="firstname" autofocus 
+            class="form-control" [(ngModel)]="contact.firstname">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="lastname" class="col-sm-3">Lastname</label>
+        <div class="col-sm-7">
+          <input id="lastname" name="lastname" 
+            class="form-control" [(ngModel)]="contact.lastname">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="dob" class="col-sm-3">Date of birth</label>
+        <div class="col-sm-7">
+          <input id="dob" name="dob" 
+            class="form-control" [(ngModel)]="contact.dob">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="email" class="col-sm-3">Email address</label>
+        <div class="col-sm-7">
+          <input id="email" name="email" 
+            class="form-control" [(ngModel)]="contact.email">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="phone" class="col-sm-3">Phone number</label>
+        <div class="col-sm-7">
+          <input id="phone" name="phone" 
+            class="form-control" [(ngModel)]="contact.phone">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="address" class="col-sm-3">Address</label>
+        <div class="col-sm-7">
+          <input id="address" name="address" 
+            class="form-control" [(ngModel)]="contact.address">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="city" class="col-sm-3">City</label>
+        <div class="col-sm-7">
+          <input id="city" name="city" 
+            class="form-control" [(ngModel)]="contact.city">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="state" class="col-sm-3">State</label>
+        <div class="col-sm-7">
+          <input id="state" name="state" 
+            class="form-control" [(ngModel)]="contact.state">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="country" class="col-sm-3">Country</label>
+        <div class="col-sm-7">
+          <input id="country" name="country" 
+            class="form-control" [(ngModel)]="contact.country">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="picture" class="col-sm-3">Picture path</label>
+        <div class="col-sm-7">
+          <input id="picture" name="picture" 
+            class="form-control" [(ngModel)]="contact.picture">
+        </div>
+      </div>
+
+    </form>
+
+  </div>
 </div>
