@@ -11,6 +11,22 @@
     <form class="form-horizontal">
 
       <div class="form-group row">
+        <label class="col-sm-3"></label>
+        <div class="col-sm-7">
+          <label [ngStyle]="{'padding.px': 10}">
+            <input type="radio" name="gender" 
+              [(ngModel)]="contact.gender" value="Male">
+            Male
+          </label>
+          <label [ngStyle]="{'padding.px': 10}">
+            <input type="radio" name="gender" 
+              [(ngModel)]="contact.gender" value="Female">
+            Female
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group row">
         <label for="firstname" class="col-sm-3">Firstname</label>
         <div class="col-sm-7">
           <input id="firstname" name="firstname" autofocus 
