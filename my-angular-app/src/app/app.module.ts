@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CounterComponent } from './components/counter/counter.component';
@@ -14,6 +15,10 @@ import { ContactCardComponent } from './components/contact-card/contact-card.com
 import { ContactListComponent } from './components/contact-list/contact-list.component';
 import { routeConfig } from './route.config';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { AddNewContactComponent } from './components/add-new-contact/add-new-contact.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +31,17 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     ContactDetailsComponent,
     ContactCardComponent,
     ContactListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HeaderComponent,
+    HomeComponent,
+    FooterComponent,
+    AddNewContactComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routeConfig, { useHash: true })
+    RouterModule.forRoot(routeConfig, { useHash: true }),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
