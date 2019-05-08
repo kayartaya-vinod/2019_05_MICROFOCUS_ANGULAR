@@ -39,9 +39,12 @@
         </tr>
       </tbody>
     </table>
+
+    <button class="btn btn-warning" 
+      [routerLink]="['/contact-list']">Back to list</button>
+
+    <button class="btn btn-danger" 
+      (click)="confirmAndDelete()">Delete this contact</button>
   </div>
 
 </div>
-
-<button class="btn btn-warning" 
-  [routerLink]="['/contact-list']">Back to list</button>

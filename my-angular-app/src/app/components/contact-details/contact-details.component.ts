@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Contact } from '../../model/contact';
 import { ContactsService } from 'src/app/services/contacts.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+
+import * as swal from 'bootstrap-sweetalert';
 
 @Component({
   selector: 'app-contact-details',
@@ -13,7 +15,8 @@ export class ContactDetailsComponent implements OnInit {
   contact: Contact = new Contact();
 
   constructor(private service: ContactsService,
-    private activatedRoute: ActivatedRoute) { }
+    private activatedRoute: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
 
@@ -24,6 +27,28 @@ export class ContactDetailsComponent implements OnInit {
     this.activatedRoute.params.subscribe(params =>
       this.service.getOneContact(params['id'])
         .subscribe(data => this.contact = data));
+  }
+
+  confirmAndDelete() {
+
+    swal({
+      title: '<span class="text-danger">Confirm deletion</span>',
+      html: true,
+      text: 'The record will be deleted permanently',
+      type: 'warning',
+      confirmButtonText: 'Yes, delete!',
+      cancelButtonText: 'Cancel',
+      showCancelButton: true,
+      confirmButtonClass: 'btn btn-danger',
+      cancelButtonClass: 'btn btn-secondary'
+    }, (confirmed) => {
+      if (confirmed) {
+        this.service.deleteContact(this.contact.id)
+          .subscribe(() => {
+            this.router.navigate(['/contact-list']);
+          });
+      }
+    });
   }
 
 }

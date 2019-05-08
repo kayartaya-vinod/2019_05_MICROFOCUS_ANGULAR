@@ -31,4 +31,8 @@ export class ContactsService {
     };
     return this.http.get(baseUrl, options).map(resp => resp as Array<Contact>);
   }
+
+  deleteContact(id: number): Observable<any> {
+    return this.http.delete(baseUrl+id);
+  }
 }

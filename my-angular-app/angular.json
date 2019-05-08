@@ -24,7 +24,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/custom-bootstrap/darkly.css"
+              "src/assets/custom-bootstrap/darkly.css",
+              "node_modules/bootstrap-sweetalert/dist/sweetalert.css"
             ],
             "scripts": [],
             "es5BrowserSupport": true
