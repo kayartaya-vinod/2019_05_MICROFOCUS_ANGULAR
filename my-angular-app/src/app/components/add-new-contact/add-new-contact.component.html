@@ -12,29 +12,35 @@
 
     <h3 class="text-center">Add details of new contact</h3>
 
-    <form class="form-horizontal">
+    <form class="form-horizontal" #f1="ngForm">
 
       <div class="form-group row">
         <label class="col-sm-3"></label>
         <div class="col-sm-7">
           <label [ngStyle]="{'padding.px': 10}">
             <input type="radio" name="gender" 
-              [(ngModel)]="contact.gender" value="Male">
+            [(ngModel)]="contact.gender" value="Male">
             Male
           </label>
           <label [ngStyle]="{'padding.px': 10}">
             <input type="radio" name="gender" 
-              [(ngModel)]="contact.gender" value="Female">
+            [(ngModel)]="contact.gender" value="Female">
             Female
           </label>
         </div>
       </div>
-
+      
       <div class="form-group row">
         <label for="firstname" class="col-sm-3">Firstname</label>
         <div class="col-sm-7">
           <input id="firstname" name="firstname" autofocus 
+            required minlength="3" maxlength="25"
+            #fname="ngModel"
             class="form-control" [(ngModel)]="contact.firstname">
+          <div class="text-warning" *ngIf="fname.dirty && fname.invalid">
+            <div *ngIf="fname.errors['required']">Firstname is mandatory</div>
+            <div *ngIf="fname.errors['minlength']">Minimum 3 letters required for firstname</div>
+          </div>
         </div>
       </div>
 
@@ -49,7 +55,7 @@
       <div class="form-group row">
         <label for="dob" class="col-sm-3">Date of birth</label>
         <div class="col-sm-7">
-          <input id="dob" name="dob" 
+          <input id="dob" name="dob" placeholder="yyyy-mm-dd"
             class="form-control" [(ngModel)]="contact.dob">
         </div>
       </div>
@@ -65,8 +71,14 @@
       <div class="form-group row">
         <label for="phone" class="col-sm-3">Phone number</label>
         <div class="col-sm-7">
-          <input id="phone" name="phone" 
+          <input id="phone" name="phone"
+            required pattern="^\+\d{1,3} \d{4}-\d{3}-\d{3}$"
+            #ph="ngModel"
             class="form-control" [(ngModel)]="contact.phone">
+          <div class="text-warning" *ngIf="ph.dirty && ph.invalid">
+            <div *ngIf="ph.errors['required']">Phone number is mandatory</div>
+            <div *ngIf="ph.errors['pattern']">Must be of pattern +91 1234-234-567</div>
+          </div>
         </div>
       </div>
 
@@ -110,7 +122,17 @@
         </div>
       </div>
 
+      <button type="button" 
+        [disabled]="f1.invalid"
+        class="btn"
+        [ngClass]="{'btn-primary': f1.valid, 'btn-danger': f1.invalid}"
+        (click)="saveContact()">Save</button>
+      <button type="button" 
+        class="btn btn-secondary" (click)="resetForm()">Reset</button>
     </form>
 
   </div>
 </div>
+<br>
+<br>
+<br>

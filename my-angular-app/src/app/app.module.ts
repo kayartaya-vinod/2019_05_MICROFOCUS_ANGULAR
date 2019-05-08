@@ -19,6 +19,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AddNewContactComponent } from './components/add-new-contact/add-new-contact.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AddNewContactComponent } from './components/add-new-contact/add-new-con
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    AddNewContactComponent
+    AddNewContactComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

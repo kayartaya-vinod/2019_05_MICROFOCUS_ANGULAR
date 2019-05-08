@@ -7,3 +7,7 @@
 .clickable:hover {
     text-shadow: 0 0 5px yellow;
 }
+
+.btn {
+    margin-right: 10px;
+}

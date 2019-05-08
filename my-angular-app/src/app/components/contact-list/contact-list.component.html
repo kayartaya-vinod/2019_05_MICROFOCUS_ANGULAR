@@ -1,19 +1,23 @@
 <div class="row">
-  <div class="col"></div>
-  <div class="col-md-6">
+    <div class="col"></div>
+    <div class="col-md-6">
+  
+      <!-- <div>
+        <button [disabled]="pageNum===1" (click)="prevPage()" class="btn btn-warning">Previous</button>
+        <button (click)="nextPage()" class="btn btn-warning">Next</button>
+      </div> -->
+  
+      <input type="search" placeholder="search..." 
+        class="form-control" [(ngModel)]="token">
+      <ul class="list-group">
+        <!-- <li class="list-group-item" *ngFor="let c of contacts | async"> -->
+        <li class="list-group-item" *ngFor="let c of (contacts | filter: token)">
+          <app-contact-card [contact]="c"></app-contact-card>
+        </li>
+      </ul>
 
-    <!-- <div>
-      <button [disabled]="pageNum===1" (click)="prevPage()" class="btn btn-warning">Previous</button>
-      <button (click)="nextPage()" class="btn btn-warning">Next</button>
-    </div> -->
-
-    <ul class="list-group">
-      <!-- <li class="list-group-item" *ngFor="let c of contacts | async"> -->
-      <li class="list-group-item" *ngFor="let c of contacts ">
-        <app-contact-card [contact]="c"></app-contact-card>
-      </li>
-    </ul>
-
+      <button class="btn btn-success" (click)="loadData()">Load more</button>
+  
+    </div>
+    <div class="col"></div>
   </div>
-  <div class="col"></div>
-</div>

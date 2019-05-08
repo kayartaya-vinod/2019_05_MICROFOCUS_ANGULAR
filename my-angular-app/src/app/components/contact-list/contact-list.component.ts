@@ -1,10 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Contact } from 'src/app/model/contact';
 import { ContactsService } from 'src/app/services/contacts.service';
-import { LoadedRouterConfig } from '@angular/router/src/config';
 
-import * as $ from 'jquery';
+// import * as $ from 'jquery';
+const $ = window['$'];
 
 @Component({
   selector: 'app-contact-list',
@@ -13,6 +12,7 @@ import * as $ from 'jquery';
 })
 export class ContactListComponent implements OnInit, OnDestroy {
 
+  token: string = '';
   pageNum: number = 1;
   // contacts: Observable<Contact[]>;
   contacts: Contact[] = [];
@@ -38,7 +38,7 @@ export class ContactListComponent implements OnInit, OnDestroy {
     w.off('scroll');
   }
 
-  private loadData(): void {
+  loadData(): void {
     this.service.getContacts(this.pageNum++)
       .subscribe(data => this.contacts.push(...data))
   }
