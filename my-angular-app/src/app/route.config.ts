@@ -3,7 +3,7 @@ import { ContactListComponent } from './components/contact-list/contact-list.com
 import { ContactDetailsComponent } from './components/contact-details/contact-details.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
-const routeConfig:Routes = [
+export const routeConfig:Routes = [
     {
         path: '',
         redirectTo: 'contact-list',
@@ -24,5 +24,3 @@ const routeConfig:Routes = [
         component: PageNotFoundComponent
     }
 ];
-
-export default routeConfig;

@@ -12,7 +12,7 @@ import { AgePipe } from './pipes/age.pipe';
 import { ContactDetailsComponent } from './components/contact-details/contact-details.component';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
 import { ContactListComponent } from './components/contact-list/contact-list.component';
-import routeConfig from './route.config';
+import { routeConfig } from './route.config';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
@@ -31,7 +31,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routeConfig, {useHash: true})
+    RouterModule.forRoot(routeConfig, { useHash: true })
   ],
   providers: [],
   bootstrap: [AppComponent]

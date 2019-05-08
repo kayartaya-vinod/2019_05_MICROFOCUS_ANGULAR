@@ -2,13 +2,14 @@
   <div class="col"></div>
   <div class="col-md-6">
 
-    <div>
+    <!-- <div>
       <button [disabled]="pageNum===1" (click)="prevPage()" class="btn btn-warning">Previous</button>
       <button (click)="nextPage()" class="btn btn-warning">Next</button>
-    </div>
+    </div> -->
 
     <ul class="list-group">
-      <li class="list-group-item" *ngFor="let c of contacts | async">
+      <!-- <li class="list-group-item" *ngFor="let c of contacts | async"> -->
+      <li class="list-group-item" *ngFor="let c of contacts ">
         <app-contact-card [contact]="c"></app-contact-card>
       </li>
     </ul>
