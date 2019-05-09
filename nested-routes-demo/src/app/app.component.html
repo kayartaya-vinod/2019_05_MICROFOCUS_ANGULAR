@@ -1,0 +1,27 @@
+<div class="container">
+  <h3 class="alert alert-info">Nested Routes Demo</h3>
+
+  <div class="row">
+    <div class="col-md-4">
+
+      <button class="btn btn-outline-secondary btn-block"
+        [routerLink]="['/home']"
+        >Home</button>
+      <button class="btn btn-outline-secondary btn-block"
+        [routerLink]="['/java']"
+        >Java</button>
+      <button class="btn btn-outline-secondary btn-block"
+        [routerLink]="['/angular']"
+        >Angular</button>
+      <button class="btn btn-outline-secondary btn-block"
+        [routerLink]="['/nodejs']"
+        >Node JS</button>
+
+    </div>
+    <div class="col-md-8">
+
+      <router-outlet></router-outlet>
+
+    </div>
+  </div>
+</div>
