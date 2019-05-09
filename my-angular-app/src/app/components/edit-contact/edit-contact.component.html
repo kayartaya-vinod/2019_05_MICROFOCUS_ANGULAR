@@ -16,6 +16,23 @@
         <label for="firstname" class="col-sm-3">Firstname</label>
         <div class="col-sm-7">
           <input id="firstname" formControlName="firstname" class="form-control">
+          
+          
+          
+          <div class="text-warning"
+            *ngIf="contactForm.controls['firstname'].dirty && contactForm.controls['firstname'].errors">
+            
+            <div *ngIf="contactForm.controls['firstname'].errors.required">
+              Firstname is required
+            </div>
+            
+            <div *ngIf="contactForm.controls['firstname'].errors.minlength">
+              Minimum 3 letters required for firstname
+            </div>
+            
+          </div>
+
+
         </div>
       </div>
 
@@ -74,7 +91,10 @@
         </div>
       </div>
 
-      <button type="button" (click)="saveChanges()" class="btn btn-primary">Save changes</button>
+      <button type="button" (click)="saveChanges()" 
+        class="btn"
+        [ngClass]="{'btn-primary': contactForm.status==='VALID', 'btn-danger': contactForm.status==='INVALID'}" 
+        [disabled]="contactForm.status==='INVALID'">Save changes</button>
     </form>
 
   </div>

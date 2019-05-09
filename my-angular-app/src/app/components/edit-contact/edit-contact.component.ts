@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ContactsService } from '../../services/contacts.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Contact } from '../../model/contact';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-contact',
@@ -20,7 +20,7 @@ export class EditContactComponent implements OnInit {
   ngOnInit() {
     this.contactForm = new FormGroup({
       id: new FormControl(),
-      firstname: new FormControl(),
+      firstname: new FormControl('', [Validators.required, Validators.minLength(3)]),
       lastname: new FormControl(),
       email: new FormControl(),
       phone: new FormControl(),

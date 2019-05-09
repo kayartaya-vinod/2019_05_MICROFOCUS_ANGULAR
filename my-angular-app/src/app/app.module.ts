@@ -52,3 +52,4 @@ import { EditContactComponent } from './components/edit-contact/edit-contact.com
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

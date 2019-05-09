@@ -11,3 +11,10 @@
 .btn {
     margin-right: 10px;
 }
+
+input.ng-valid{
+    border-left: 7px solid green !important;
+}
+input.ng-invalid {
+    border-left: 7px solid red !important;
+}
