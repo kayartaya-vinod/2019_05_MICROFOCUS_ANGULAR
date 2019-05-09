@@ -4,6 +4,7 @@ import { ContactDetailsComponent } from './components/contact-details/contact-de
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HomeComponent } from './components/home/home.component';
 import { AddNewContactComponent } from './components/add-new-contact/add-new-contact.component';
+import { EditContactComponent } from './components/edit-contact/edit-contact.component';
 
 export const routeConfig:Routes = [
     {
@@ -23,6 +24,10 @@ export const routeConfig:Routes = [
     {
         path: 'contact-details/:id',
         component: ContactDetailsComponent
+    },
+    {
+        path: 'edit-contact/:id',
+        component: EditContactComponent
     },
     {
         path: 'new-contact',

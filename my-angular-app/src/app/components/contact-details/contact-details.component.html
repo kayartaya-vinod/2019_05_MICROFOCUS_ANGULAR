@@ -48,6 +48,9 @@
     <button class="btn btn-warning" 
       [routerLink]="['/contact-list']">Back to list</button>
 
+    <button class="btn btn-success" (click)="storeContactInSession()"
+      [routerLink]="['/edit-contact', contact.id]">Edit details</button>
+
     <button class="btn btn-danger" 
       (click)="confirmAndDelete()">Delete this contact</button>
   </div>

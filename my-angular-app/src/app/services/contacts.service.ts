@@ -40,7 +40,27 @@ export class ContactsService {
     return this.http.post(baseUrl, contact)
       .map(resp => resp as Contact);
   }
+
+  updateContact(contact: Contact): Observable<Contact> {
+    return this.http.put(baseUrl + contact.id, contact)
+      .map(resp => resp as Contact);
+  }
 }
+
+
+/*
+PUT /contacts/23 HTTP1.1
+Host: localhost:3000
+Content-Type: application/json
+Accept: application/json
+Cookies: a=1;b=2;c=3
+
+{
+  "firstname": "john",
+  "lastname": "doe",
+  ...
+}
+*/
 
 /*
 POST /contacts/ HTTP1.1

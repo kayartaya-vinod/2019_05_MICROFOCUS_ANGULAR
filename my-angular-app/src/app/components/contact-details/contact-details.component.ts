@@ -51,4 +51,8 @@ export class ContactDetailsComponent implements OnInit {
     });
   }
 
+  storeContactInSession() {
+    sessionStorage.setItem('contact', JSON.stringify(this.contact));
+    // this.service['contact_for_edit'] = this.contact;
+  }
 }

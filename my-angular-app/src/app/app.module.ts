@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CounterComponent } from './components/counter/counter.component';
@@ -20,6 +20,7 @@ import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AddNewContactComponent } from './components/add-new-contact/add-new-contact.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { EditContactComponent } from './components/edit-contact/edit-contact.component';
 
 @NgModule({
   declarations: [
@@ -37,13 +38,15 @@ import { FilterPipe } from './pipes/filter.pipe';
     HomeComponent,
     FooterComponent,
     AddNewContactComponent,
-    FilterPipe
+    FilterPipe,
+    EditContactComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routeConfig, { useHash: true }),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

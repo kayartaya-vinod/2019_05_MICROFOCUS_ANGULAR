@@ -1,0 +1,84 @@
+<br>
+<br>
+<br>
+<div class="row">
+  <div class="col">
+    <img [src]="contactForm.value.picture" class="img-responsive"
+      [ngStyle]="{'width.px': 300, 'height.px': 300, 'border-radius.px': 10}" />
+
+  </div>
+  <div class="col">
+    <h3>Edit the contact details</h3>
+    <form [formGroup]="contactForm" class="form-horizontal">
+
+      <!-- .form-group>(label.col-sm-3+(.col-sm-7>input#firstname.form-control)) -->
+      <div class="form-group row">
+        <label for="firstname" class="col-sm-3">Firstname</label>
+        <div class="col-sm-7">
+          <input id="firstname" formControlName="firstname" class="form-control">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="lastname" class="col-sm-3">Lastname</label>
+        <div class="col-sm-7">
+          <input id="lastname" formControlName="lastname" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="dob" class="col-sm-3">Date of birth</label>
+        <div class="col-sm-7">
+          <input id="dob" formControlName="dob" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="email" class="col-sm-3">Email id</label>
+        <div class="col-sm-7">
+          <input id="email" formControlName="email" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="phone" class="col-sm-3">Phone number</label>
+        <div class="col-sm-7">
+          <input id="phone" formControlName="phone" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="address" class="col-sm-3">Address</label>
+        <div class="col-sm-7">
+          <input id="address" formControlName="address" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="city" class="col-sm-3">City</label>
+        <div class="col-sm-7">
+          <input id="city" formControlName="city" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="state" class="col-sm-3">State</label>
+        <div class="col-sm-7">
+          <input id="state" formControlName="state" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="country" class="col-sm-3">Country</label>
+        <div class="col-sm-7">
+          <input id="country" formControlName="country" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="picture" class="col-sm-3">Picture</label>
+        <div class="col-sm-7">
+          <input id="picture" formControlName="picture" class="form-control">
+        </div>
+      </div>
+
+      <button type="button" (click)="saveChanges()" class="btn btn-primary">Save changes</button>
+    </form>
+
+  </div>
+</div>
+<br>
+<br>
+<br>

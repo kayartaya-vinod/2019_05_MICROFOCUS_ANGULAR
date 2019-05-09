@@ -60,15 +60,15 @@
       "id": 10,
       "firstname": "Biron",
       "lastname": "Impy",
-      "gender": "Male",
       "email": "bimpy9@bbc.co.uk",
       "phone": "5156439406",
       "dob": "1986-12-16",
+      "gender": "Male",
       "address": "650 Gateway Center",
       "city": "Des Moines",
       "state": "Iowa",
-      "country": "United States",
-      "picture": "http://kvinod.com/old_ci/randomdata/images/men/10.jpg"
+      "picture": "http://kvinod.com/old_ci/randomdata/images/men/10.jpg",
+      "country": "United States"
     },
     {
       "id": 11,
