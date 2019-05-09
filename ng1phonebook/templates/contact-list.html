@@ -1,0 +1,27 @@
+<h3>Contact list</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Email id</th>
+            <th>Phone number</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="c in contacts">
+            <td><img ng-src="{{c.picture}}" 
+                    style="width: 50px; height: 50px; border-radius: 70%;">
+            </td>
+            <td>
+                <a href="/#!/contact-details/{{c.id}}">
+                    <span ng-bind="c.firstname"></span>
+                </a>
+            </td>
+            <td><span ng-bind="c.email"></span></td>
+            <td><span ng-bind="c.phone"></span></td>
+            <td><span ng-bind="c.city"></span></td>
+        </tr>
+    </tbody>
+</table>

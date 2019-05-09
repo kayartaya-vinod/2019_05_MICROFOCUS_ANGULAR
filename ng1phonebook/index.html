@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="phonebook">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular 1.x App</title>
+
+    <link rel="stylesheet" href="/assets/thirdparty/bootstrap-4.3.1-dist/css/bootstrap.css">
+
+    <script src="/assets/js/jquery/jquery-3.4.1.js"></script>
+    <script src="/assets/thirdparty/bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+    <script src="/assets/js/angular-1.7.8/angular.js"></script>
+    <script src="/assets/js/angular-1.7.8/angular-route.js"></script>
+    <script src="/app/main.js"></script>
+    <script src="/app/contact-list.controller.js"></script>
+    <script src="/app/contact-details.controller.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="alert alert-info">Angular 1.x Phonebook Application</h1>
+        <a class="btn btn-link" href="/#!/">Home</a>
+        <a class="btn btn-link" href="/#!/contact-list">Contact list</a>
+
+        <div style="margin: 30px 0;" ng-view>please wait...</div>
+    </div>
+</body>
+</html>

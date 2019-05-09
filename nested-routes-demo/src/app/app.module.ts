@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { UpgradeModule } from '@angular/upgrade/static';
+
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/nested-routes-demo/home/home.component';
@@ -13,6 +16,8 @@ import { AngularjsComponent } from './components/nested-routes-demo/angular/angu
 import { Angular7Component } from './components/nested-routes-demo/angular/angular7/angular7.component';
 import { NodeComponent } from './components/nested-routes-demo/node/node.component';
 import { routes } from './route.config';
+import { DynamicFormsComponent } from './components/dynamic-forms/dynamic-forms.component';
+import { Angular1AppComponent } from './components/angular1-app/angular1-app.component';
 
 
 // npm i bootstrap jquery popper.js
@@ -28,11 +33,15 @@ import { routes } from './route.config';
     AngularComponent,
     AngularjsComponent,
     Angular7Component,
-    NodeComponent
+    NodeComponent,
+    DynamicFormsComponent,
+    Angular1AppComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ReactiveFormsModule,
+    UpgradeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

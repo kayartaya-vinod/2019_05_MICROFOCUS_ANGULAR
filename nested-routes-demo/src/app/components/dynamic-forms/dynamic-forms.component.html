@@ -1,0 +1,51 @@
+<h3>Enter employee data</h3>
+
+<form [formGroup]="empForm" class="form-horizontal">
+
+  <!-- .form-group.row>(label.col-md-4+(.col-md-8>input.form-control)) -->
+  <div class="form-group row">
+    <label for="name" class="col-md-4">Name: </label>
+    <div class="col-md-8">
+      <input type="text" id="name" class="form-control" formControlName="name">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for=email class="col-md-4">Email id: </label>
+    <div class="col-md-8">
+      <input type="text" id=email class="form-control" formControlName=email>
+    </div>
+  </div>
+
+  <div formGroupName="address">
+    <div class="form-group row">
+      <label for="city" class="col-md-4">City: </label>
+      <div class="col-md-8">
+        <input type="text" id="city" class="form-control" formControlName="city">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="country" class="col-md-4">Country: </label>
+      <div class="col-md-8">
+        <input type="text" id="country" class="form-control" formControlName="country">
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h3>Skills: </h3>
+    
+    <div *ngFor="let sk of empForm.get('skills')['controls']">
+      <div [formGroup]="sk">
+        Name: <input type="text" formControlName="name" placeholder="skill name">
+        Level: <input type="number" formControlName="level" placeholder="skill level">
+      </div>
+    </div>
+    <br><br>
+    <button class="btn btn-primary" (click)="addSkill()">Add another skill</button>
+  </div>
+
+</form>
+
+<p>
+  {{ empForm.value | json }}
+</p>

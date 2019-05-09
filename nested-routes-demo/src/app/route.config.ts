@@ -8,6 +8,8 @@ import { AngularComponent } from './components/nested-routes-demo/angular/angula
 import { AngularjsComponent } from './components/nested-routes-demo/angular/angularjs/angularjs.component';
 import { Angular7Component } from './components/nested-routes-demo/angular/angular7/angular7.component';
 import { NodeComponent } from './components/nested-routes-demo/node/node.component';
+import { DynamicFormsComponent } from './components/dynamic-forms/dynamic-forms.component';
+import { Angular1AppComponent } from './components/angular1-app/angular1-app.component';
 
 export const routes: Routes = [
     {
@@ -54,5 +56,13 @@ export const routes: Routes = [
     {
         path: 'nodejs',
         component: NodeComponent
+    },
+    {
+        path: 'dynamic-forms-demo',
+        component: DynamicFormsComponent
+    },
+    {
+        path: 'angular1-app',
+        component: Angular1AppComponent
     }
 ]

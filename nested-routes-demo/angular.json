@@ -26,7 +26,15 @@
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js",
+              "src/assets/angular-1.7.8/angular.js",
+              "src/assets/angular-1.7.8/angular-route.js",
+              "src/assets/app/main.js",
+              "src/assets/app/contact-details.controller.js",
+              "src/assets/app/contact-list.controller.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
